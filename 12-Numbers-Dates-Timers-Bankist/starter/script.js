@@ -251,3 +251,31 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+
+console.log(Number.parseInt('200BDT'));
+
+const date = new Date();
+const myBal = 150000000;
+
+console.log(
+  navigator.language,
+  new Intl.DateTimeFormat(navigator.language).format(date)
+);
+console.log(
+  navigator.language,
+  new Intl.NumberFormat(navigator.language).format(myBal)
+);
+
+//todo: setTimeout function
+
+const ingredient = ['olive', 'tomato'];
+
+const pizzaTimer = setTimeout(
+  (ing1, ing2) => console.log(`Here Is Your Pizza with ${ing1} and ${ing2} 🍕`),
+  3000,
+  ...ingredient
+);
+
+console.log('waiting...');
+
+ingredient.includes('cheese') ? clearTimeout(pizzaTimer) : null;
